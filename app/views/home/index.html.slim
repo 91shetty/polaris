@@ -10,11 +10,10 @@
         - @posts.each do |post|
           - i = i + 1
           .col-lg-15.col-md-4
-            //a href="/posts/#{post.id}"
             .panel.panel-default
               .panel-body
-                i.fa.fa-star-o.fa-lg.unbookmarked
-                h5 = truncate(post.title, :length => 25)
+                i.fa.fa-star.fa-lg.unbookmarked.hide
+                h5 = truncate(post.title, :length => 30)
                 a href="/posts/#{post.id}"
                   .overlay
               .panel-footer

@@ -15,15 +15,18 @@
   p {
     font-size: 20px;
   }
+  .row:last-child {
+    margin: 0 0 30px;
+  }
   .panel {
     height: 165px;
-    .panel-body {
-      h5 {
-        position: absolute;
-        bottom: 0;
-        left: 10px;
-        z-index: 999;
-      }
+    margin: 0;
+    h5 {
+      position: absolute;
+      color: white;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 999;
     }
     .panel-footer{
       font-size: 12px;
@@ -82,8 +85,8 @@
     .panel-body {
       h4 {
         position: absolute;
-        bottom: 0;
-        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 999;
       }
     }

@@ -28,11 +28,6 @@ $(document).ready(function(){
     }, function(){
         $(this).find(".unbookmarked").addClass("hide");
     })
-    $('.filter').hover(function(){
-        $(this).parent().find("p").removeClass("invisible");
-    },function(){
-        $(this).parent().find("p").addClass("invisible");
-    })
     $('.fa-star').click(function(){
         $(this).toggleClass("unbookmarked");
         $(this).toggleClass("bookmarked");
