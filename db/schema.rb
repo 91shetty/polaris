@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151201182445) do
+=======
+ActiveRecord::Schema.define(version: 20151201092310) do
+>>>>>>> 8f45eaaa6cc41e7f589cc42093465f3bc8d5b1eb
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,10 +45,42 @@ ActiveRecord::Schema.define(version: 20151201182445) do
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
 
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.date     "from"
+    t.date     "to"
+    t.integer  "user_id"
+    t.string   "location"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.string   "hostedby"
+    t.text     "description"
+    t.float    "intereted"
+    t.integer  "going"
+    t.integer  "invited"
+    t.string   "cover"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "helps", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.string   "location"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.integer  "requiredby"
+    t.text     "description"
+    t.string   "cover"
+    t.date     "date"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "short_description"
-    t.integer  "user_id",           null: false
+    t.integer  "user_id",            null: false
     t.text     "tagging_details"
     t.time     "publish_date"
     t.datetime "created_at"
@@ -52,6 +88,11 @@ ActiveRecord::Schema.define(version: 20151201182445) do
     t.string   "postType"
     t.integer  "upVotes"
     t.integer  "downVotes"
+    t.string   "cover"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
   end
 
   create_table "sections", force: :cascade do |t|

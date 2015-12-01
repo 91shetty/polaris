@@ -19,6 +19,7 @@ body {
     color: white;
   }
 }
+
 .card {
   padding: 30px;
   box-shadow: 0 0 5px #888;
@@ -104,22 +105,4 @@ body {
 
 .panel:last-child {
   margin-right: 0;
-}
-
-.navbar-inverse {
-  background: #26A69A;
-  border: 0;
-  .navbar-brand {
-    color: white;
-  }
-  ul.navbar-nav {
-    li a {
-      margin: 0 10px;
-      color: white;
-    }
-  }
-}
-
-.bookmarked {
-  color: #26A69A;
 }
